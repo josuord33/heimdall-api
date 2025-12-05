@@ -1,5 +1,6 @@
+
 # src/core/domain/event.py
-from pydantic import BaseModel, Field, conint, constr
+from pydantic import BaseModel, Field, conint, ConfigDict
 from typing import Optional
 from datetime import datetime
 
@@ -21,5 +22,4 @@ class EventDB(EventCreate):
     operator_ip: Optional[str] = Field(None, description="IP address of the client that submitted the event.")
     team: str = Field("Muskiz EB", description="Team performing the action (default: Muskiz EB).")
     
-    class Config:
-        populate_by_name = True
+    model_config = ConfigDict(populate_by_name=True)

@@ -12,3 +12,7 @@ python-jose[cryptography]
 
 # Data Validation
 pydantic
+
+# Testing
+pytest
+httpx
