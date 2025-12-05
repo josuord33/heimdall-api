@@ -1,0 +1,14 @@
+# Core Framework
+fastapi
+uvicorn
+
+# Database and Environment
+pymongo
+python-dotenv
+
+# Security (JWT, Hashing, etc.)
+passlib[bcrypt]
+python-jose[cryptography]
+
+# Data Validation
+pydantic

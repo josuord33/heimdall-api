@@ -1,0 +1,42 @@
+# -------------------------------------------------------------------
+# HEIMDALL API GITIGNORE
+# Exclude sensitive files, temporary artifacts, and locally generated data.
+# -------------------------------------------------------------------
+
+# 1. Virtual Environment and Python Cache
+# Python virtual environment directories (local dependencies)
+venv/
+.venv/
+env/
+
+# Python compiled bytecode and cache directories
+__pycache__/
+*.pyc
+
+# Pytest and coverage artifacts
+.pytest_cache/
+.coverage
+
+# 2. Sensitive Configuration Files
+# THE MOST CRITICAL EXCLUSION: Environment variables and secret keys
+# These files contain MONGO_URI, SECRET_KEY, and other sensitive data.
+.env
+.env.local
+
+# 3. Development and OS Artifacts (macOS, IDEs)
+# macOS temporary files
+.DS_Store
+
+# IDE configuration files (e.g., PyCharm, VSCode)
+.idea/
+.vscode/
+
+# 4. Logs, Data Output, and Distribution Files
+# Log files generated during runtime
+*.log
+/logs/
+
+# Build and distribution files
+*.egg-info/
+dist/
+build/
