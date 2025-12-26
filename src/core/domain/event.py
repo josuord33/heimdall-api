@@ -7,7 +7,7 @@ from datetime import datetime
 # --- Pydantic Model for incoming HTTP data ---
 class EventCreate(BaseModel):
     match_id: str = Field(..., description="Unique ID of the current match (ObjectId string).")
-    player_dorsal: conint(ge=1, le=99) = Field(..., description="Dorsal of the player involved in the action.")
+    player_number: conint(ge=1, le=99) = Field(..., description="Number of the player involved in the action.")
     game_minute: conint(ge=0) = Field(..., description="Minute in the match clock.")
     
     action_type: str = Field(..., strict=True, pattern=r"^(GOAL|MISS|RECOVERY|LOSS|RIVAL_GOAL|TIMEOUT|CARD)$", description="Primary action type.")

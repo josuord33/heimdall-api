@@ -6,7 +6,7 @@ def test_record_new_event():
     # Mock data
     event_data = EventCreate(
         match_id="507f1f77bcf86cd799439011",
-        player_dorsal=10,
+        player_number=10,
         game_minute=15,
         action_type="GOAL",
         action_subtype="Zone 1"

@@ -7,7 +7,7 @@ client = TestClient(app)
 def test_create_event_success():
     payload = {
         "match_id": "507f1f77bcf86cd799439011",
-        "player_dorsal": 10,
+        "player_number": 10,
         "game_minute": 15,
         "action_type": "GOAL",
         "action_subtype": "Zone 1"
@@ -24,7 +24,7 @@ def test_create_event_success():
 def test_create_event_invalid_data():
     payload = {
         "match_id": "507f1f77bcf86cd799439011",
-        "player_dorsal": 10,
+        "player_number": 10,
         "game_minute": 15,
         "action_type": "INVALID_TYPE", # Invalid
         "action_subtype": "Zone 1"
